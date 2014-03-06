@@ -1,5 +1,8 @@
 # Train
 
+This is a fork of [Train](https://github.com/shaoshing/train) to fix some little snags.  We will create pull
+request to keep the original project up to date and hopefully they will be accepted.
+
 Assets Management Package for web app in Go. The main purpose of it is to introduce some good practices already existed in Ruby on Rails' [Assets Pipeline](http://guides.rubyonrails.org/asset_pipeline.html).
 
 ## Main features
@@ -13,13 +16,13 @@ Assets Management Package for web app in Go. The main purpose of it is to introd
 Get the package:
 
 ```bash
-$ go get github.com/shaoshing/train
+$ go get github.com/ProductHealth/train
 ```
 
 Install the command-line tool:
 
 ```bash
-$ go build -o $GOPATH/bin/train github.com/shaoshing/train/cmd
+$ go build -o $GOPATH/bin/train github.com/ProductHealth/train/cmd
 ```
 
 ### Prepare for the Pipeline feature
@@ -38,7 +41,7 @@ $ $GOPATH/bin/train
 ### Quick Example
 
 ```bash
-$ cd $GOPATH/src/github.com/shaoshing/train
+$ cd $GOPATH/src/github.com/ProductHealth/train
 $ go run example/main.go
 # Visit localhost:8000 and play with the `include` directive and the SASS and CoffeeScript Pipeline.
 ```
@@ -50,7 +53,7 @@ In the example page, you can toggle the Include Directive feature, or try out th
 First, allow train to handle assets requests by adding handler to the http.ServeMux:
 
 ```go
-import "github.com/shaoshing/train"
+import "github.com/ProductHealth/train"
 
 ...
 
@@ -73,7 +76,7 @@ http.ListenAndServe(":8000", mux)
 Next, add the helper functions to templates so that Train can generate assets links for you:
 
 ```go
-import "github.com/shaoshing/train"
+import "github.com/ProductHealth/train"
 import "html/templates"
 
 ...

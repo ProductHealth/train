@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/shaoshing/train/interpreter"
+	"github.com/ProductHealth/train/interpreter"
 	"path"
 	"runtime"
 	"strings"
@@ -21,8 +21,8 @@ func diagnose() bool {
 		return false
 	}
 
-	if !strings.Contains(rubyVersion, "1.9") {
-		fmt.Printf("-- Train requires Ruby version to be 1.9.x; you have %s", rubyVersion)
+	if !(strings.HasPrefix(rubyVersion, "1.9") || strings.HasPrefix(rubyVersion, "2.")) {
+		fmt.Printf("-- Train requires Ruby version to be 1.9.x or higher; you have %s", rubyVersion)
 		fmt.Println("   (Please install required Ruby version if you wish to use SASS or CoffeeScript)")
 		return false
 	}
@@ -64,7 +64,7 @@ func diagnose() bool {
 	if allGood {
 		fmt.Println("-- Great, your environment seems perfect for Train.")
 	} else {
-		fmt.Println("-- (Please create an issue at github.com/shaoshing/train/issues if you need help)")
+		fmt.Println("-- (Please create an issue at github.com/ProductHealth/train/issues if you need help)")
 	}
 
 	return allGood

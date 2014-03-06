@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/shaoshing/train/interpreter"
+	"github.com/ProductHealth/train/interpreter"
 	"io/ioutil"
 	"os"
 	"path"

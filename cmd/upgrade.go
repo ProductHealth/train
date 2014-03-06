@@ -7,7 +7,7 @@ import (
 const CmdBinPath = "$GOPATH/bin/train"
 
 func upgrade() {
-	bash("go get -u github.com/shaoshing/train")
-	bash("go build -o " + CmdBinPath + " github.com/shaoshing/train/cmd")
+	bash("go get -u github.com/ProductHealth/train")
+	bash("go build -o " + CmdBinPath + " github.com/ProductHealth/train/cmd")
 	fmt.Println("Installed latest train command into " + CmdBinPath)
 }
